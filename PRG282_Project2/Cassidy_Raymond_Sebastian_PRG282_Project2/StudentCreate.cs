@@ -12,6 +12,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
 {
     public partial class StudentCreate : Form
     {
+        DataHandler handler = new DataHandler();
         public StudentCreate()
         {
             InitializeComponent();

@@ -17,6 +17,8 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             InitializeComponent();
         }
 
+        DataHandler handler = new DataHandler();
+
         private void button1_Click(object sender, EventArgs e)
         {
             //Executes login procedures
