@@ -58,5 +58,39 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
                 cmd.ExecuteNonQuery();
             }
         }
+
+        public void deleteData(string StudentNummber)
+        {
+            using (SqlConnection connect = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("spDeleteStudent", connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@@StudentNumber", StudentNummber);
+
+                connect.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public DataTable searchData(string StudentNummber)
+        {
+            using (SqlConnection connect = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("spSearchStudent", connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@StudentNumber", StudentNummber);
+
+                connect.Open();
+                DataTable dt = new DataTable();
+
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    dt.Load(dr);
+                    return dt;
+                }
+            }
+        }
     }
 }
