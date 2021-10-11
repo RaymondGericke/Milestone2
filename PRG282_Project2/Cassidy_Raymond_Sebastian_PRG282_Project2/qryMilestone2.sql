@@ -86,3 +86,12 @@ BEGIN
 	SELECT * FROM Students
 	WHERE StudentNumber = @StudentNumber 
 END
+
+GO
+CREATE Table Modules
+(
+	ModCode VARCHAR(8),
+	ModName VARCHAR(20),
+	ModuleDesc VARCHAR(100),
+	RecourceLinks NVARCHAR(max) not null
+)
