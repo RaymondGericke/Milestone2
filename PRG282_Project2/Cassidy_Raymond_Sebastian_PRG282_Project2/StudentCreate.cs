@@ -19,7 +19,12 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
 
         private void StudentCreate_Load(object sender, EventArgs e)
         {
+            //
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //
         }
     }
 }
