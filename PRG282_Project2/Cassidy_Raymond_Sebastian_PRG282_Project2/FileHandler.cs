@@ -8,18 +8,54 @@ using System.IO;
 namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewick
 {
     class FileHandler
-    {
-        public void Login()
+    {   
+        public class User
         {
-            string loginFile = @"C:\Users\Cassidy\Desktop\PRG282_Project2\LoginDetails.txt";
+            public string UserName { get; set; }
+            public string Password { get; set; }
 
-            if (File.Exists(loginFile))
+            static string path = @"C:\Users\sebas\source\repos\Milestone2\PRG282_Project2\Cassidy_Raymond_Sebastian_PRG282_Project2\bin\Debug\LoginDetails.txt";
+            public static void WriteUser(User obj)
             {
-                //Write login code
-                //Write validation code
-                Console.WriteLine("Lol k");
+                BinaryWriter Writer = new BinaryWriter(File.Open(path, FileMode.Create));
+                Writer.Write(obj.UserName);
+                Writer.Write(obj.Password);
+                Writer.Close();
             }
-            else Console.WriteLine("ERROR 404");
+            public static void ReadUser(User obj)
+            {
+                BinaryReader Reader = new BinaryReader(File.Open(path, FileMode.Open));
+                obj.UserName = Reader.ReadString();
+                obj.Password = Reader.ReadString();
+                Reader.Close();
+            }
+        }
+
+        public bool Login(string Username, string Password)
+        {            
+            User Active = new User();
+            User.ReadUser(Active);
+
+            if (Username == Active.UserName && Password == Active.Password)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        public string Register(string Username, string Password)
+        {
+            User Active = new User();
+
+            Active.UserName = Username;
+            Active.Password = Password;
+            User.WriteUser(Active);
+
+            string Text = "User Created!";
+            return Text;
         }
     }
 }
