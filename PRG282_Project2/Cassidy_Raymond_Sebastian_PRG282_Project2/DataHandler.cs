@@ -104,8 +104,6 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
                 cmd.Parameters.AddWithValue("@ModName", ModName);
                 cmd.Parameters.AddWithValue("@ModuleDesc", ModuleDesc);
                 cmd.Parameters.AddWithValue("@RecourceLinks", RescourceLinks);
-                
-
 
                 connect.Open();
                 cmd.ExecuteNonQuery();

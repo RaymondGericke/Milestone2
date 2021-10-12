@@ -14,7 +14,8 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
             public string UserName { get; set; }
             public string Password { get; set; }
 
-            static string path = @"C:\Users\sebas\source\repos\Milestone2\PRG282_Project2\Cassidy_Raymond_Sebastian_PRG282_Project2\bin\Debug\LoginDetails.txt";
+            //C:\Users\raymo\OneDrive\Desktop\PRG282\Milestone2Git\Milestone2\PRG282_Project2\Cassidy_Raymond_Sebastian_PRG282_Project2\bin\Debug
+            static string path = @"..\PRG282_Project2\Cassidy_Raymond_Sebastian_PRG282_Project2\bin\Debug\LoginDetails.txt";
             public static void WriteUser(User obj)
             {
                 BinaryWriter Writer = new BinaryWriter(File.Open(path, FileMode.Create));

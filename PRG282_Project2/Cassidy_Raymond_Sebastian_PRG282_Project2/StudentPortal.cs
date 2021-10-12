@@ -45,5 +45,15 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
         {
             dataGridView1.DataSource = handler.searchData(int.Parse(textBox1.Text));
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }
