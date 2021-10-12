@@ -53,5 +53,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
                                comboBox1.Text);
             MessageBox.Show("Data Inserted Successfully");
         }
-    }
+        private void button3_Click(object sender, EventArgs e)
+        {
+        }
 }
