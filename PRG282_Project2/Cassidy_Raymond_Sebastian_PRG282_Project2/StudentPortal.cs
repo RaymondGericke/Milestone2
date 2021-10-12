@@ -53,7 +53,12 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //
+            dataGridView1.DataSource = handler.displayStudents();
+        }
+
+        private void StudentPortal_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
