@@ -16,5 +16,10 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
