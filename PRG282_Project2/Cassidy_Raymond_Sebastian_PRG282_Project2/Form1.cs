@@ -22,12 +22,28 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
         private void button1_Click(object sender, EventArgs e)
         {
             //Executes login procedures
+            string Username, Password;
+            bool Valid;
+            Username = textBox1.Text;
+            Password = textBox2.Text;
             FileHandler handler = new FileHandler();
-            handler.Login();
+            Valid = handler.Login(Username, Password);
+
+            if (Valid == true)
+            {
+                MessageBox.Show(Username + " has been logged in!");
+                var StudentPortal = new StudentPortal();
+                StudentPortal.Show();
+            }
+            else
+            {
+                MessageBox.Show("Username and Password does not match!");
+                textBox1.Text = "";
+                textBox2.Text = "";
+            }
 
             //Opens second form
-            var StudentPortal = new StudentPortal();
-            StudentPortal.Show();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -37,14 +53,11 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string username, password;
-            Console.WriteLine("Please enter a username: ");
-            username = Console.ReadLine();
-            //Validation code for incase username exists already
-            Console.WriteLine("Please enter a password: ");
-            password = Console.ReadLine();
-            
-            //Save user to file
+            string Username, Password;
+            Username = textBox1.Text;
+            Password = textBox2.Text;
+            FileHandler handler = new FileHandler();
+            label1.Text = handler.Register(Username, Password);
         }
     }
 }
