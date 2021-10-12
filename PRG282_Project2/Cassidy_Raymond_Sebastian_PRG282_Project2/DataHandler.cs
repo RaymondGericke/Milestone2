@@ -110,5 +110,18 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
 
             }
         }
+
+        public DataTable displayStudents()
+        {
+            string query = @"SELECT * FROM Students";
+
+            SqlDataAdapter da = new SqlDataAdapter(query, conn);
+
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }

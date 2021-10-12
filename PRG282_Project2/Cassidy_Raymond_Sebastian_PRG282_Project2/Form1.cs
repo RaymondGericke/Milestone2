@@ -43,7 +43,9 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             }
 
             //Opens second form
-            
+
+            //hides LOGIN form for the love of cheese
+            this.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
