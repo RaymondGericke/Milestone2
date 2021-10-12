@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewick
+namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 //and Sebastian_Marnewick
 {
     class FileHandler
     {   
