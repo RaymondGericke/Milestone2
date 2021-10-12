@@ -3,12 +3,13 @@
 USE Milestone2
 Go
 
+Go
 CREATE Table Students
 (
 	StudentNumber INT NOT NULL,
 	sName VARCHAR(100),
 	Surname VARCHAR(100),
-	StudentIMG VARBINARY(MAX),
+	StudentIMG image,
 	DOB DATE,
 	GENDER VARCHAR(20),
 	PhoneNo VARCHAR(11),
