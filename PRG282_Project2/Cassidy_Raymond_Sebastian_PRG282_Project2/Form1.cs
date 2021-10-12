@@ -22,8 +22,11 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
         private void button1_Click(object sender, EventArgs e)
         {
             //Executes login procedures
+            string Username, Password;
+            Username = txtUsername.Text;
+            Password = txtPassword.Text;
             FileHandler handler = new FileHandler();
-            handler.Login();
+            handler.Login(Username, Password);
 
             //Opens second form
             var StudentPortal = new StudentPortal();

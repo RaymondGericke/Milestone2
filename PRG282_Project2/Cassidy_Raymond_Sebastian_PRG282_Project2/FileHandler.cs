@@ -9,7 +9,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
 {
     class FileHandler
     {
-        public void Login()
+        public void Login(string Username, string Password)
         {
             string loginFile = @"C:\Users\Cassidy\Desktop\PRG282_Project2\LoginDetails.txt";
 
