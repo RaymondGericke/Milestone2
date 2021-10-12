@@ -14,7 +14,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
     {
         string conn = "Server=(local); Initial Catalog=Milestone2; Integrated Security=SSPI";
 
-        public void insertData(int StudentNummber, string Name, string Surname, byte[] StudentIMG, DateTime DOB, string GENDER, string PhoneNo, string Address, string ModCodes)
+        public void insertData(int StudentNummber, string Name, string Surname, string StudentIMG, DateTime DOB, string GENDER, string PhoneNo, string Address, string ModCodes)
         {
             using (SqlConnection connect = new SqlConnection(conn))
             {
@@ -37,7 +37,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
 
             }
         }
-        public void updateData(int StudentNummber, string Name, string Surname, byte[] StudentIMG, DateTime DOB, string GENDER, string PhoneNo, string Address, string ModCodes)
+        public void updateData(int StudentNummber, string Name, string Surname, string StudentIMG, DateTime DOB, string GENDER, string PhoneNo, string Address, string ModCodes)
         {
             using (SqlConnection connect = new SqlConnection(conn))
             {
