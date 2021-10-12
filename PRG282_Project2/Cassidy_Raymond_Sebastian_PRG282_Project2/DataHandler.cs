@@ -14,7 +14,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
     {
         string conn = "Server=(local); Initial Catalog=Milestone2; Integrated Security=SSPI";
 
-        public void insertData(string StudentNummber, string Name, string Surname, byte[] StudentIMG, DateTime DOB, string GENDER, string PhoneNo, string Address, string ModCodes)
+        public void insertData(int StudentNummber, string Name, string Surname, byte[] StudentIMG, DateTime DOB, string GENDER, string PhoneNo, string Address, string ModCodes)
         {
             using (SqlConnection connect = new SqlConnection(conn))
             {
@@ -37,7 +37,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
 
             }
         }
-        public void updateData(string StudentNummber, string Name, string Surname, byte[] StudentIMG, DateTime DOB, string GENDER, string PhoneNo, string Address, string ModCodes)
+        public void updateData(int StudentNummber, string Name, string Surname, byte[] StudentIMG, DateTime DOB, string GENDER, string PhoneNo, string Address, string ModCodes)
         {
             using (SqlConnection connect = new SqlConnection(conn))
             {
@@ -59,7 +59,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
             }
         }
 
-        public void deleteData(string StudentNummber)
+        public void deleteData(int StudentNummber)
         {
             using (SqlConnection connect = new SqlConnection(conn))
             {
@@ -73,7 +73,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
             }
         }
 
-        public DataTable searchData(string StudentNummber)
+        public DataTable searchData(int StudentNummber)
         {
             using (SqlConnection connect = new SqlConnection(conn))
             {
@@ -90,6 +90,26 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
                     dt.Load(dr);
                     return dt;
                 }
+            }
+        }
+
+        public void insertModule(string ModCode, string ModName, string ModuleDesc, string RescourceLinks)
+        {
+            using (SqlConnection connect = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("spAddStudent", connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@ModCode", ModCode);
+                cmd.Parameters.AddWithValue("@ModName", ModName);
+                cmd.Parameters.AddWithValue("@ModuleDesc", ModuleDesc);
+                cmd.Parameters.AddWithValue("@RecourceLinks", RescourceLinks);
+                
+
+
+                connect.Open();
+                cmd.ExecuteNonQuery();
+
             }
         }
     }
