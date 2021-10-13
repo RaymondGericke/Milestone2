@@ -29,6 +29,13 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
             //
         }
 
+        private void moduleInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var ModuleInfo = new ModuleInfo();
+            ModuleInfo.Show();
+            //this.Hide();
+        }
+
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Deleting a student with appropriate message
@@ -76,7 +83,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
 
             }
         }
-        public void DataGrid(string id, string name, string surname, string image, string birth, string Gender, string phone, string address, string Modcodes;)
+        public void DataGrid(string id, string name, string surname, string image, string birth, string Gender, string phone, string address, string Modcodes)
         { 
             
         }
