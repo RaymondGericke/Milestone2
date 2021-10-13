@@ -23,7 +23,18 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
 
         private void StudentCreate_Load(object sender, EventArgs e)
         {
-            //
+            string id, name, surname, image, birth, gender, phone, address, modcodes;
+            id = handler.ID();
+            name = handler.Name();
+            surname = handler.Surname();
+            image = handler.Image();
+            birth = handler.Birth();
+            gender = handler.Gender();
+            phone = handler.Phone();
+            address = handler.Address();
+            modcodes = handler.Modcodes();
+
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

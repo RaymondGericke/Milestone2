@@ -75,6 +75,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
                 Modcodes = row.Cells["StudentIMG"].Value.ToString();
 
             }
+            handler.VariableStore(id, name, surname, image, birth, Gender, phone, address, Modcodes);
         }
         public void DataGrid(string id, string name, string surname, string image, string birth, string Gender, string phone, string address, string Modcodes;)
         { 

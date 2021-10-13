@@ -147,6 +147,28 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
             }
 
         }
-
+        string id, name, surname, image, birth, gender, phone, address, modcodes;
+        public void VariableStore(string id, string name, string surname, string image, string birth, string gender, string phone, string address, string modcodes)
+        {
+            this.id = id;
+            this.name = name;
+            this.surname = surname;
+            this.image = image;
+            this.birth = image;
+            this.gender = gender;
+            this.phone = phone;
+            this.address = address;
+            this.modcodes = modcodes;
+        }
+        public string ID { get => id; set => id = value; }
+        public string Name { get => name; set => name = value; }
+        public string Surname { get => surname; set => surname = value; }
+        public string Image { get => image; set => image = value; }
+        public string Birth { get => birth; set => birth = value; }
+        public string Gender { get => gender; set => gender = value; }
+        public string Phone { get => phone; set => phone = value; }
+        public string Address { get => address; set => address = value; }
+        public string Modcodes { get => modcodes; set => modcodes = value; }
+       
     }
 }
