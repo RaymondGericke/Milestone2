@@ -273,6 +273,18 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "DBD281",
+            "PRG281",
+            "PRG282",
+            "LPR281",
+            "STA281",
+            "MAT281",
+            "IOT281",
+            "WPR281",
+            "SAD281",
+            "INF281",
+            "PMM281"});
             this.comboBox1.Location = new System.Drawing.Point(81, 112);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";

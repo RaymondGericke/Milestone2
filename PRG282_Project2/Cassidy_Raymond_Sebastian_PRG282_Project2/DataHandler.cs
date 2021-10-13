@@ -21,7 +21,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
             {
                 SqlConnection cons = new SqlConnection();
                 cons.Open();
-                string query = $"INSERT INTO Students VALUES {person.ID}, '{person.Name}', '{person.Surname}', '{person.Image}', {person.Birth},'{person.Gender}', '{person.Phone}','{person.Address}','{person.Modcodes}'";
+                string query = $"INSERT INTO Students VALUES {person.ID}, '{person.Name}', '{person.Surname}', '{person.Image}', '{person.Birth}','{person.Gender}', '{person.Phone}','{person.Address}','{person.Modcodes}'";
                 SqlCommand cmd = new SqlCommand(query, cons);
                 cmd.ExecuteNonQuery();
                 cons.Close();
@@ -161,7 +161,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
                 MessageBox.Show("Action could not be completed!" + ex.Message);
                
                 return false;
-                
+               
             }
 
         }
