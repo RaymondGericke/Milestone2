@@ -27,7 +27,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
                 cons.Close();
                 return true;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return false;
             }
@@ -142,7 +142,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
 
             return dt;
         }
-        
+
         //Function to delete a student
         public bool Delete(int sID)
         {
@@ -159,13 +159,46 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
             catch (Exception ex)
             {
                 MessageBox.Show("Action could not be completed!" + ex.Message);
-               
+
                 return false;
-                
+
             }
 
         }
-        
-        
+        public bool UpdateUser(int ID, string name, string surname, string image, string date, string phone, string adress, string code, string gender)
+        {
+            try
+            {
+                SqlConnection cons = new SqlConnection(conn);
+                cons.Open();
+                string query = $"UPDATE Students SET Name = '{name}', Surname = '{surname}', image = '{image}, date = '{date}', phone = '{phone}', adress = '{adress}', code = '{code}', gender = '{gender}' WHERE ID={ID}";
+                SqlCommand cmd = new SqlCommand(query, cons);
+                cmd.ExecuteNonQuery();
+                cons.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteUser(int ID)
+        {
+            try
+            {
+                SqlConnection cons = new SqlConnection(conn);
+                cons.Open();
+                string query = $"DELETE * FROM Students WHERE ID={ID}";
+                SqlCommand cmd = new SqlCommand(query, cons);
+                cmd.ExecuteNonQuery();
+                cons.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }   
     }
 }

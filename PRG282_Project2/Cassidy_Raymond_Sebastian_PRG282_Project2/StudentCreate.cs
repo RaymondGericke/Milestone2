@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Marnewick
 {
@@ -83,7 +84,42 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
         }
         private void button3_Click(object sender, EventArgs e)
         {
+            bool flag = true;
+            int ID = int.Parse(textBox1.Text);
+            string name = textBox2.Text;
+            string surname = textBox3.Text;
+            string image = textBox4.Text;
+            string Date = dateTimePicker1.Value.ToString();
+            string phone = textBox5.Text;
+            string adress = textBox6.Text;
+            string code = comboBox1.SelectedIndex.ToString();
+            string gender = "N/A";
 
+            if (radioButton1.Checked = true)
+            {
+                gender = "Male";
+            }
+            else if (radioButton2.Checked = true)
+            {
+                gender = "Female";
+            }
+            else
+            {
+                MessageBox.Show("Please select ONE gender!");
+                flag = false;
+            }
+
+            if (flag == true)
+            {
+                if (handler.UpdateUser(ID, name, surname, image, Date, phone, adress, code, gender))
+                {
+                    MessageBox.Show("Data Updated!");
+                }
+                else
+                {
+                    MessageBox.Show("Error 404!");
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -96,6 +132,28 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
             string argument = "/select, \"" + filePath + "\"";
 
             System.Diagnostics.Process.Start("explorer.exe", argument);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int ID = int.Parse(textBox1.Text);
+
+            DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (res == DialogResult.OK)
+            {
+                if (handler.DeleteUser(ID) == true)
+                {
+                    MessageBox.Show("User Deleted!");
+                }
+                else
+                {
+                    MessageBox.Show("Error 404!");
+                }
+            }
+            if (res == DialogResult.Cancel)
+            {
+                MessageBox.Show("Delete Action Stopped!");
+            }
         }
     }
 }

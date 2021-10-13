@@ -330,6 +330,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             this.button4.TabIndex = 15;
             this.button4.Text = "DELETE STUDENT";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // StudentCreate
             // 
