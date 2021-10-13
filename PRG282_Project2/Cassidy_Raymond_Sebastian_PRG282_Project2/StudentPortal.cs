@@ -29,6 +29,13 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
             //
         }
 
+        private void moduleInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var ModuleInfo = new ModuleInfo();
+            ModuleInfo.Show();
+            //this.Hide();
+        }
+
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Deleting a student with appropriate message
@@ -58,7 +65,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*
+
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
@@ -75,12 +82,11 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
                 Modcodes = row.Cells["StudentIMG"].Value.ToString();
 
             }
-            handler.VariableStore(id, name, surname, image, birth, Gender, phone, address, Modcodes);*/
         }
-        //public void DataGrid(string id, string name, string surname, string image, string birth, string Gender, string phone, string address, string Modcodes;)
-        //{ 
+        public void DataGrid(string id, string name, string surname, string image, string birth, string Gender, string phone, string address, string Modcodes)
+        { 
             
-        //}
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {

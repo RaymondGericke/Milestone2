@@ -57,10 +57,10 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(627, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(470, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 34);
+            this.button1.Size = new System.Drawing.Size(130, 28);
             this.button1.TabIndex = 2;
             this.button1.Text = "Import Data";
             this.button1.UseVisualStyleBackColor = false;
@@ -70,21 +70,21 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 38);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 412);
+            this.dataGridView1.Size = new System.Drawing.Size(600, 335);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(211, 7);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(158, 6);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(388, 22);
+            this.textBox1.Size = new System.Drawing.Size(292, 20);
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "Search StudentID";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -99,8 +99,8 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             this.addToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 35);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -110,21 +110,21 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             this.updateStudentToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.alterDataToolStripMenuItem.Name = "alterDataToolStripMenuItem";
-            this.alterDataToolStripMenuItem.Size = new System.Drawing.Size(127, 31);
+            this.alterDataToolStripMenuItem.Size = new System.Drawing.Size(100, 25);
             this.alterDataToolStripMenuItem.Text = "Alter Data";
             this.alterDataToolStripMenuItem.Click += new System.EventHandler(this.alterDataToolStripMenuItem_Click);
             // 
             // updateStudentToolStripMenuItem
             // 
             this.updateStudentToolStripMenuItem.Name = "updateStudentToolStripMenuItem";
-            this.updateStudentToolStripMenuItem.Size = new System.Drawing.Size(256, 32);
+            this.updateStudentToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.updateStudentToolStripMenuItem.Text = "Update Student";
             this.updateStudentToolStripMenuItem.Click += new System.EventHandler(this.updateStudentToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(256, 32);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.deleteToolStripMenuItem.Text = "Delete Selected ";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -134,33 +134,34 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             this.studentInformationToolStripMenuItem,
             this.moduleInformationToolStripMenuItem});
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(62, 31);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(51, 25);
             this.addToolStripMenuItem.Text = "Add";
             // 
             // studentInformationToolStripMenuItem
             // 
             this.studentInformationToolStripMenuItem.Name = "studentInformationToolStripMenuItem";
-            this.studentInformationToolStripMenuItem.Size = new System.Drawing.Size(288, 32);
+            this.studentInformationToolStripMenuItem.Size = new System.Drawing.Size(230, 26);
             this.studentInformationToolStripMenuItem.Text = "Student Information";
             // 
             // moduleInformationToolStripMenuItem
             // 
             this.moduleInformationToolStripMenuItem.Name = "moduleInformationToolStripMenuItem";
-            this.moduleInformationToolStripMenuItem.Size = new System.Drawing.Size(288, 32);
+            this.moduleInformationToolStripMenuItem.Size = new System.Drawing.Size(230, 26);
             this.moduleInformationToolStripMenuItem.Text = "Module Information";
+            this.moduleInformationToolStripMenuItem.Click += new System.EventHandler(this.moduleInformationToolStripMenuItem_Click);
             // 
             // StudentPortal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "StudentPortal";
             this.Text = "Student Portal";
             this.Load += new System.EventHandler(this.StudentPortal_Load);
