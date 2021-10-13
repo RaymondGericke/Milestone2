@@ -23,16 +23,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
 
         private void StudentCreate_Load(object sender, EventArgs e)
         {
-            string id, name, surname, image, birth, gender, phone, address, modcodes;
-            id = handler.ID();
-            name = handler.Name();
-            surname = handler.Surname();
-            image = handler.Image();
-            birth = handler.Birth();
-            gender = handler.Gender();
-            phone = handler.Phone();
-            address = handler.Address();
-            modcodes = handler.Modcodes();
+            
 
             
         }
@@ -53,6 +44,8 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
             //string DOB = dateTimePicker1.Value.ToString("yyyy-MM-dd");
             //string ModCodes = comboBox1.Text;
 
+            /*
+            //Raymond Version of StudentCreate
             //int StudentNummber, string Name, string Surname, string StudentIMG, DateTime DOB, string GENDER, string PhoneNo, string Address, string ModCodes
             handler.insertData(int.Parse(textBox1.Text), //ID
                                textBox2.Text, //Name
@@ -63,7 +56,30 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
                                textBox5.Text, //Phone No
                                textBox6.Text, //Address
                                comboBox1.Text);
-            MessageBox.Show("Data Inserted Successfully");
+            MessageBox.Show("Data Inserted Successfully");*/
+
+            //Cassidy Version of Student Create
+            int StNum = int.Parse(textBox1.Text);
+            string name = textBox2.Text;
+            string Surname = textBox3.Text;
+            string IMG = textBox4.Text;
+            DateTime DOB = dateTimePicker1.Value.Date;
+            string gender = GENDER;
+            string phone = textBox5.Text;
+            string address = textBox6.Text;
+            string Modcodes = comboBox1.Text;
+
+            Student register = new Student(StNum, name, Surname, IMG, DOB, gender, phone, address, Modcodes);
+
+             if (handler.Register(register))
+            {
+                MessageBox.Show("Student Registered!");
+            }
+            else
+            {
+                MessageBox.Show("Student could not be registered");
+            }
+
         }
         private void button3_Click(object sender, EventArgs e)
         {
