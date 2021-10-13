@@ -27,9 +27,9 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
             Username = textBox1.Text;
             Password = textBox2.Text;
             FileHandler handler = new FileHandler();
-            Valid = handler.Login(Username, Password);
 
-            if (Valid == true)
+            bool Access = handler.LoginUser(Username, Password);
+            if (Access == true)
             {
                 MessageBox.Show(Username + " has been logged in!");
                 var StudentPortal = new StudentPortal();
@@ -41,7 +41,6 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
                 textBox1.Text = "";
                 textBox2.Text = "";
             }
-
             //Opens second form
 
             //hides LOGIN form for the love of cheese
@@ -59,7 +58,12 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
             Username = textBox1.Text;
             Password = textBox2.Text;
             FileHandler handler = new FileHandler();
-            label1.Text = handler.Register(Username, Password);
+            label5.Text = handler.AddUser(Username, Password);
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

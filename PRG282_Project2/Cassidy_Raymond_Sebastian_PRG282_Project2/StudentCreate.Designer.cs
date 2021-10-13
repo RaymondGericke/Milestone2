@@ -54,6 +54,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -158,9 +159,9 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             this.groupBox2.Controls.Add(this.textBox4);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.Location = new System.Drawing.Point(9, 33);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(308, 209);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
@@ -169,7 +170,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(129, 180);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(59, 17);
             this.radioButton2.TabIndex = 3;
@@ -181,7 +182,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(129, 158);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(48, 17);
             this.radioButton1.TabIndex = 3;
@@ -203,7 +204,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(243, 92);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 21);
             this.button1.TabIndex = 1;
@@ -215,7 +216,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(127, 93);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(110, 20);
@@ -224,7 +225,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(135, 44);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(173, 20);
             this.textBox1.TabIndex = 11;
@@ -232,7 +233,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(135, 72);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(173, 20);
             this.textBox2.TabIndex = 11;
@@ -240,7 +241,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(135, 101);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(173, 20);
             this.textBox3.TabIndex = 11;
@@ -248,7 +249,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(135, 158);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(173, 20);
             this.dateTimePicker1.TabIndex = 12;
@@ -262,9 +263,9 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Location = new System.Drawing.Point(328, 33);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(220, 209);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
@@ -273,7 +274,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(81, 112);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(135, 21);
             this.comboBox1.TabIndex = 11;
@@ -281,7 +282,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(82, 34);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(134, 66);
@@ -290,7 +291,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(82, 12);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(134, 20);
             this.textBox5.TabIndex = 10;
@@ -299,7 +300,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // 
             this.button2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(10, 249);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(538, 28);
             this.button2.TabIndex = 14;
@@ -311,7 +312,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             // 
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(10, 280);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(538, 28);
             this.button3.TabIndex = 14;
@@ -319,12 +320,24 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(10, 312);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(538, 28);
+            this.button4.TabIndex = 15;
+            this.button4.Text = "DELETE STUDENT";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // StudentCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(562, 310);
+            this.ClientSize = new System.Drawing.Size(562, 352);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dateTimePicker1);
@@ -339,7 +352,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentCreate";
             this.Text = "Add Student";
             this.Load += new System.EventHandler(this.StudentCreate_Load);
@@ -379,5 +392,6 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
