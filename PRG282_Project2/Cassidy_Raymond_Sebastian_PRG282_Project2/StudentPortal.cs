@@ -31,6 +31,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Deleting a student with appropriate message
             if (handler.Delete(int.Parse(id)))
             {
                 MessageBox.Show($"Deleted details of student number: {int.Parse(id)}");
@@ -44,12 +45,14 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
 
         private void updateStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Opening Create student form to update data fully
             var StudentCreate = new StudentCreate();
             StudentCreate.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            //On change event for more efficiently searching for students
             dataGridView1.DataSource = handler.searchData(int.Parse(textBox1.Text));
         }
 
@@ -60,7 +63,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
 
-                //In project, values will be assigned to variables instead of textboxes
+                //Assigning values to variables from selected row in datagridview
                 id = row.Cells["StudentNumber"].Value.ToString();
                 name = row.Cells["sName"].Value.ToString();
                 surname = row.Cells["Surname"].Value.ToString();

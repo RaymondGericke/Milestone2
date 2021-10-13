@@ -124,7 +124,8 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
 
             return dt;
         }
-
+        
+        //Function to delete a student
         public bool Delete(int sID)
         {
             try
