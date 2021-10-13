@@ -15,6 +15,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
     {
         string conn = "Server=(local); Initial Catalog=Milestone2; Integrated Security=SSPI";
 
+        /*
         public bool Register(Student person)
         {
             try
@@ -31,8 +32,8 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
             {
                 return false;
             }
-        }
-        /*
+        }*/
+        
         public void insertData(int StudentNummber, string Name, string Surname, string StudentIMG, DateTime DOB, string GENDER, string PhoneNo, string Address, string ModCodes)
         {
             using (SqlConnection connect = new SqlConnection(conn))
@@ -55,7 +56,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
                 cmd.ExecuteNonQuery();
 
             }
-        }*/
+        }
         public void updateData(int StudentNummber, string Name, string Surname, string StudentIMG, DateTime DOB, string GENDER, string PhoneNo, string Address, string ModCodes)
         {
             using (SqlConnection connect = new SqlConnection(conn))
@@ -189,7 +190,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
             {
                 SqlConnection cons = new SqlConnection(conn);
                 cons.Open();
-                string query = $"DELETE * FROM Students WHERE ID={ID}";
+                string query = $"DELETE * FROM Milestone2 WHERE StudentNumber={ID}";
                 SqlCommand cmd = new SqlCommand(query, cons);
                 cmd.ExecuteNonQuery();
                 cons.Close();
