@@ -36,6 +36,12 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
             //this.Hide();
         }
 
+        private void studentInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var StudentCreate = new StudentCreate();
+            StudentCreate.Show();
+        }
+
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Deleting a student with appropriate message
