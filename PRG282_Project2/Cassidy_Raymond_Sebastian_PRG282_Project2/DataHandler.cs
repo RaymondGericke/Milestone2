@@ -15,6 +15,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
     {
         string conn = "Server=(local); Initial Catalog=Milestone2; Integrated Security=SSPI";
 
+        /*
         public bool Register(Student person)
         {
             try
@@ -27,12 +28,12 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
                 cons.Close();
                 return true;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return false;
             }
-        }
-        /*
+        }*/
+        
         public void insertData(int StudentNummber, string Name, string Surname, string StudentIMG, DateTime DOB, string GENDER, string PhoneNo, string Address, string ModCodes)
         {
             using (SqlConnection connect = new SqlConnection(conn))
@@ -55,7 +56,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
                 cmd.ExecuteNonQuery();
 
             }
-        }*/
+        }
         public void updateData(int StudentNummber, string Name, string Surname, string StudentIMG, DateTime DOB, string GENDER, string PhoneNo, string Address, string ModCodes)
         {
             using (SqlConnection connect = new SqlConnection(conn))
@@ -142,7 +143,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
 
             return dt;
         }
-        
+
         //Function to delete a student
         public bool Delete(int sID)
         {
@@ -159,13 +160,46 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
             catch (Exception ex)
             {
                 MessageBox.Show("Action could not be completed!" + ex.Message);
-               
+
                 return false;
-                
+
             }
 
         }
-        
-        
+        public bool UpdateUser(int ID, string name, string surname, string image, string date, string phone, string adress, string code, string gender)
+        {
+            try
+            {
+                SqlConnection cons = new SqlConnection(conn);
+                cons.Open();
+                string query = $"UPDATE Students SET Name = '{name}', Surname = '{surname}', image = '{image}, date = '{date}', phone = '{phone}', adress = '{adress}', code = '{code}', gender = '{gender}' WHERE ID={ID}";
+                SqlCommand cmd = new SqlCommand(query, cons);
+                cmd.ExecuteNonQuery();
+                cons.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteUser(int ID)
+        {
+            try
+            {
+                SqlConnection cons = new SqlConnection(conn);
+                cons.Open();
+                string query = $"DELETE * FROM Milestone2 WHERE StudentNumber={ID}";
+                SqlCommand cmd = new SqlCommand(query, cons);
+                cmd.ExecuteNonQuery();
+                cons.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }   
     }
 }

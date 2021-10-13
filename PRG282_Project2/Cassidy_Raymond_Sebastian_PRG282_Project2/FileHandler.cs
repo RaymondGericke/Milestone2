@@ -8,55 +8,58 @@ using System.IO;
 namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewick
 {
     class FileHandler
-    {   
-        public class User
+    {           
+        public string AddUser(string username, string password)
         {
-            public string UserName { get; set; }
-            public string Password { get; set; }
+            string FilePath = Directory.GetCurrentDirectory() + "/LoginDetails.txt";
+            string[] ActiveUserList = File.ReadAllLines(FilePath);
+            bool Valid = true;
 
-            ////C:\Users\raymo\OneDrive\Desktop\PRG282\Milestone2Git\Milestone2\PRG282_Project2\Cassidy_Raymond_Sebastian_PRG282_Project2\bin\Debug
-            static string path = @"C:\Users\raymo\OneDrive\Desktop\PRG282\Milestone2Git\Milestone2\PRG282_Project2\Cassidy_Raymond_Sebastian_PRG282_Project2\bin\Debug\LoginDetails.txt";
-            public static void WriteUser(User obj)
+            for (int i = 0; i < ActiveUserList.Length; i++)
             {
-                BinaryWriter Writer = new BinaryWriter(File.Open(path, FileMode.Create));
-                Writer.Write(obj.UserName);
-                Writer.Write(obj.Password);
+                string[] TextLines = ActiveUserList[i].Split('-');
+
+                if (TextLines[0] == username)
+                {
+                    Valid = false;
+                    break;
+                }
+                else
+                {
+                    Valid = true;
+                }
+            }
+            if (Valid == true)
+            {
+                string NewUser = string.Empty;
+                StreamWriter Writer = new StreamWriter(FilePath, true);
+                NewUser += username + '-' + password + '-';
+                Writer.WriteLine(NewUser);
                 Writer.Close();
-            }
-            public static void ReadUser(User obj)
-            {
-                BinaryReader Reader = new BinaryReader(File.Open(path, FileMode.Open));
-                obj.UserName = Reader.ReadString();
-                obj.Password = Reader.ReadString();
-                Reader.Close();
-            }
-        }
-
-        public bool Login(string Username, string Password)
-        {            
-            User Active = new User();
-            User.ReadUser(Active);
-
-            if (Username == Active.UserName && Password == Active.Password)
-            {
-                return true;
+                return "Your user has been created successfully!";
             }
             else
             {
-                return false;
+                return "Username already Exists!";
             }
-
         }
-        public string Register(string Username, string Password)
+        public bool LoginUser(string username, string password)
         {
-            User Active = new User();
+            string FilePath = Directory.GetCurrentDirectory() + "/LoginDetails.txt";
+            string[] ActiveUserList = File.ReadAllLines(FilePath);
+            bool Valid = false;
 
-            Active.UserName = Username;
-            Active.Password = Password;
-            User.WriteUser(Active);
+            for (int i = 0; i < ActiveUserList.Length; i++)
+            {
+                string[] TextLines = ActiveUserList[i].Split('-');
 
-            string Text = "User Created!";
-            return Text;
+                if (TextLines[0] == username && TextLines[1] == password)
+                {
+                    Valid = true;
+                    break;
+                }
+            }
+            return Valid;
         }
     }
 }
