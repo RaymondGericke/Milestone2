@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
+namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Marnewick
 {
     public partial class StudentPortal : Form
     {

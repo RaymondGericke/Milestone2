@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
+namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Marnewick
 {
     public partial class StudentCreate : Form
     {
@@ -29,7 +30,7 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
         {
             if (radioButton1.Checked == true)
             {
-                 GENDER = "Male";
+                GENDER = "Male";
             }
             else
             {
@@ -55,5 +56,19 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2
         }
         private void button3_Click(object sender, EventArgs e)
         {
+
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string filePath = @"/C:\Users\raymo\OneDrive\Desktop\PRG282\Milestone2Git\Milestone2\PRG282_Project2\Cassidy_Raymond_Sebastian_PRG282_Project2\bin\Debug\Bobby.png";
+            if (!File.Exists(filePath))
+            {
+                return;
+            }
+            string argument = "/select, \"" + filePath + "\"";
+
+            System.Diagnostics.Process.Start("explorer.exe", argument);
+        }
+    }
 }
