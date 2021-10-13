@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewick
 {
@@ -124,6 +125,27 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // Sebastian_Marnewi
             return dt;
         }
 
-        
+        public bool Delete(int sID)
+        {
+            try
+            {
+                SqlConnection cons = new SqlConnection(conn);
+                cons.Open();
+                string query = $"DELETE FROM Students WHERE StudentNumber = '{sID}'";
+                SqlCommand cmd = new SqlCommand(query, cons);
+                cmd.ExecuteNonQuery();
+                cons.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Action could not be completed!" + ex.Message);
+               
+                return false;
+                
+            }
+
+        }
+
     }
 }

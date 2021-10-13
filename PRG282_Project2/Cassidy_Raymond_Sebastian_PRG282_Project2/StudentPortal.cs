@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 
 namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Marnewick
@@ -30,7 +31,10 @@ namespace Cassidy_Potgieter_Raymond_Gericke_PRG282_Project2 // and Sebastian_Mar
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //
+            if (handler.Delete(int.Parse(id)))
+            {
+                MessageBox.Show($"Deleted details of student number: {int.Parse(id)}");
+            }
         }
 
         private void alterDataToolStripMenuItem_Click(object sender, EventArgs e)
